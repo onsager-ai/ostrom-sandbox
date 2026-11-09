@@ -30,7 +30,7 @@ export function parse(text) {
       field += c;
     }
   }
-  if (text.length > 0 && text[text.length - 1] !== "\n") {
+  if (field !== "" || row.length > 0) {
     row.push(field);
     rows.push(row);
   }

@@ -10,6 +10,10 @@ test("keeps the final row without a trailing newline", () => {
   assert.deepEqual(parse("a,b"), [["a", "b"]]);
 });
 
+test("keeps multiple rows when the final field is quoted and has no trailing newline", () => {
+  assert.deepEqual(parse('a,b\n"c,d",e'), [["a", "b"], ["c,d", "e"]]);
+});
+
 test("keeps commas inside quotes", () => {
   assert.deepEqual(parse('"a,b",c\n'), [["a,b", "c"]]);
 });
