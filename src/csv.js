@@ -30,6 +30,7 @@ export function parse(text) {
       field += c;
     }
   }
+  // Flush a final row that has no trailing newline.
   if (field !== "" || row.length > 0) {
     row.push(field);
     rows.push(row);

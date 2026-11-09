@@ -2,6 +2,10 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { parse } from "../src/csv.js";
 
+test("returns no rows for empty input", () => {
+  assert.deepEqual(parse(""), []);
+});
+
 test("splits fields and rows", () => {
   assert.deepEqual(parse("a,b\nc,d\n"), [["a", "b"], ["c", "d"]]);
 });
