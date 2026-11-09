@@ -10,6 +10,10 @@ test("splits fields and rows", () => {
   assert.deepEqual(parse("a,b\nc,d\n"), [["a", "b"], ["c", "d"]]);
 });
 
+test("treats CRLF as a row ending", () => {
+  assert.deepEqual(parse("a,b\r\nc,d\r\n"), [["a", "b"], ["c", "d"]]);
+});
+
 test("keeps the final row without a trailing newline", () => {
   assert.deepEqual(parse("a,b"), [["a", "b"]]);
 });
