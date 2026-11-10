@@ -12,10 +12,11 @@ Nothing here is production code. Issues, PRs and branches may be created and clo
 
 ## Empty fields
 
-Two commas with nothing between them create an empty middle field:
+Two commas with nothing between them create an empty middle field, and a trailing
+comma creates an empty final field:
 
 ```js
 import { parse } from "./src/csv.js";
 
-parse("left,,right"); // => [["left", "", "right"]]
+parse("a,,c,"); // => [["a", "", "c", ""]]
 ```
