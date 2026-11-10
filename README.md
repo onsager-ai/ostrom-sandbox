@@ -9,3 +9,14 @@ keeps a final row even when the input has no trailing newline. It has known gaps
 endings, which make good practice issues.
 
 Nothing here is production code. Issues, PRs and branches may be created and closed freely.
+
+## Whitespace
+
+Spaces inside an unquoted field are preserved by `parse`:
+
+```js
+import { parse } from "./src/csv.js";
+
+parse("first last,another field");
+// [["first last", "another field"]]
+```
