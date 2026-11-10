@@ -9,3 +9,14 @@ keeps a final row even when the input has no trailing newline. It has known gaps
 endings, which make good practice issues.
 
 Nothing here is production code. Issues, PRs and branches may be created and closed freely.
+
+## Empty fields
+
+Two commas with nothing between them create an empty middle field, and a trailing
+comma creates an empty final field:
+
+```js
+import { parse } from "./src/csv.js";
+
+parse("a,,c,"); // => [["a", "", "c", ""]]
+```
