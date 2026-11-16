@@ -34,3 +34,4 @@ For example, `parse("a,\"b,c\"")` returns `[["a", "b,c"]]`.
 
 The tests use Node's built-in `node:test` runner. With Node 24, run `npm test`.
 The tests live in the `test/` folder.
+A successful run ends with a summary such as `# pass 7`.
