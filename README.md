@@ -6,7 +6,9 @@ GitHub without touching a real project.
 
 The project is a deliberately small CSV parser (`src/csv.js`) with tests (`npm test`, Node 24). It
 keeps a final row even when the input has no trailing newline. It has known gaps, such as CRLF line
-endings, which make good practice issues.
+endings, which make good practice issues. Outside quoted fields, a lone carriage return (`\r`) is
+kept in the field text; line feed (`\n`) and carriage return followed by line feed (`\r\n`) end a
+row.
 
 Nothing here is production code. Issues, PRs and branches may be created and closed freely.
 
