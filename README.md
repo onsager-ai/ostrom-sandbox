@@ -29,3 +29,7 @@ console.log(rows);
 A field wrapped in double quotes may contain commas, and `""` inside quotes represents one `"`.
 
 For example, `parse("a,\"b,c\"")` returns `[["a", "b,c"]]`.
+
+## Running the tests
+
+With Node 24, run `npm test`.
