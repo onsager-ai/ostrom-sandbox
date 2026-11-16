@@ -13,7 +13,7 @@ Nothing here is production code. Issues, PRs and branches may be created and clo
 
 ## Contributing
 
-Issues and PRs here are created by Ostrom tests.
+Issues here may be created by Ostrom tests or humans, and PRs here are created by Ostrom tests.
 
 ## Headerless input
 
