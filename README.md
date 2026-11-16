@@ -22,3 +22,7 @@ const rows = parse("name,age\nAda,37");
 console.log(rows);
 // [["name", "age"], ["Ada", "37"]]
 ```
+
+## Quoted fields
+
+A field wrapped in double quotes may contain commas, and `""` inside quotes represents one `"`.
