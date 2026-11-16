@@ -21,12 +21,12 @@ export function parse(text) {
     } else if (c === ",") {
       row.push(field);
       field = "";
-    } else if (c === "\n" || (c === "\r" && text[i + 1] === "\n")) {
+    } else if (c === "\n" || c === "\r") {
       row.push(field);
       rows.push(row);
       row = [];
       field = "";
-      if (c === "\r") i++;
+      if (c === "\r" && text[i + 1] === "\n") i++;
     } else {
       field += c;
     }
