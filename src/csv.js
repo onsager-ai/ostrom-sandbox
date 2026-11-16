@@ -1,3 +1,4 @@
+// A small CSV parser for the Ostrom sandbox.
 // Parse CSV text into rows of string fields.
 // Supports commas, double-quoted fields and "" escapes inside quotes.
 export function parse(text) {
