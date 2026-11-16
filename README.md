@@ -11,6 +11,10 @@ kept as field data rather than treated as a row ending.
 
 Nothing here is production code. Issues, PRs and branches may be created and closed freely.
 
+## Contributing
+
+Issues and PRs here are created by Ostrom tests.
+
 ## Headerless input
 
 The parser does not infer column headers. It returns every CSV row as data, including the first
